@@ -37,7 +37,8 @@ let popularList =css({
 })
 let popularItem =css({
 	marginLeft: 24,
-	textAlign: 'center'
+	textAlign: 'center',
+	listStyle:'none'
 })
 let popularRank =css({
 	fontSize: 20,
@@ -65,9 +66,9 @@ function RepoGrid (props) {
                   src={repo.owner.avatar_url}
                   alt={'Avatar for ' + repo.owner.login}
                 />
-              <li><a href={repo.html_url}>{repo.name}</a></li>
-              <li style={{color:'purple'}}>@{repo.owner.login}</li>
-              <li style={{color:'orange'}}>{repo.stargazers_count} stars</li>
+              <li style={{listStyle:'none'}}><a href={repo.html_url}>{repo.name}</a></li>
+              <li style={{color:'purple',listStyle:'none'}}>@{repo.owner.login}</li>
+              <li style={{color:'orange',listStyle:'none'}}>{repo.stargazers_count} stars</li>
             </ul>
           </li>
         )
